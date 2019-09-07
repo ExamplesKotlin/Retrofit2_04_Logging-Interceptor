@@ -49,6 +49,7 @@ object Injection {
     return Retrofit.Builder()
         .baseUrl("https://api.github.com/")
         .addConverterFactory(GsonConverterFactory.create())
+        .client(provideOkHttpClient())
         .build()
   }
 
